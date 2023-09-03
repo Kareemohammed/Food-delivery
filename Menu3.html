@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General styles */
+      body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* General styles */
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #ff4500; /* Vibrant and bold header background color */
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6100; /* Change background color on hover */
+      color: #fff;
+    }
+
+    /* Main section styles */
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #ff4500; /* Eye-catching color for section headings */
+      font-size: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section p {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+ footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #ff4500;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact p {
+      margin-bottom: 5px;
+    }
+
+    .footer-social {
+      text-align: right;
+    }
+
+    .footer-social a {
+      display: inline-block;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #ff4500;
+    }
+
+    /* Additional Footer Styles */
+    .footer-divider {
+      width: 100%;
+      height: 2px;
+      background-color: #ff4500;
+      margin: 20px 0;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff4500;
+    }
+
+    .footer-info {
+      color: #ddd;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Additional styling for specific elements */
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      text-align:left;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .rating {
+      color: #ffcc00;
+    }
+
+    /* New styles for hero section */
+    .hero {
+      background-image: url('Imag2.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;    
+      padding: 19rem 0;
+      color: #fff;
+     
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #ffcc00;
+      color: #333;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #f6b700;
+    }
+
+    /* Grid layout for food items */
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .food-item {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      border: 1px solid black;
+    }
+
+    .food-item img {
+      max-width: 300px; /* Adjust the size as needed */
+      max-height: 300px; /* Adjust the size as needed */
+      object-fit: cover; /* This will make the image in square shape */
+      border-radius: 10px; /* Add a border-radius for rounded corners */
+      margin-right: 10px; /* Adjust the spacing between the image and details */
+    }
+
+    /* Styling for food item details */
+    .food-details h2 {
+      margin-top: 0;
+    }
+
+    .food-details p {
+      margin-bottom: 1rem;
+    }
+
+    .food-details .price {
+      font-weight: bold;
+    }
+    
+
+    .cta-button {
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      border-radius: 50px;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      background-color: #ff6100;
+      transform: scale(1.05);
+    }
+ footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+
+/* Floating cart button styles */
+.floating-cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-cart-button button {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.floating-cart-button button:hover {
+  background-color: #f6b700;
+  transform: scale(1.05);
+}
+
+
+/* Floating cart popup styles */
+.floating-cart-popup {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+   background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+  z-index: 1000;
+  border-radius: 20px; 
+ border: 3px solid #ff4500;
+}
+
+
+.popup-title {
+  font-size: 18px;
+  margin: 10px;
+  color: #ff4500; /* Add a distinctive color */
+}
+
+
+.floating-cart-popup .cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.floating-cart-popup .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* Styling for the checkout button in the cart section */
+.checkout-button {
+  display: block;
+  margin: 10px auto; /* Center the button horizontally */
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; /* Adjust font size for the button */
+  padding: 8px 12px; /* Adjust padding for height */
+  width: 120px; /* Reduce the width for a compact look */
+  border-radius: 50px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-button:hover {
+  background-color: #ff6100;
+  transform: scale(1.05);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px; /* Adjust font size for cart items */
+}
+
+.cart-item span {
+  flex: 1;
+}
+
+.cart-item span:last-child {
+  font-weight: bold; /* Make the price bold */
+}
+
+.blurred-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 999; /* Make sure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+.cart-item-image {
+  max-width: 50px; /* Adjust the image width as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+#totalPrice {
+  text-align: right;
+  margin-top: 10px; /* Add some space above the total price */
+  margin-right: 10px; /* Add some space to the right of the total price */
+  font-weight: bold;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="blurred-background" id="blurredBackground"></div>
+<div id="cartPopup" class="floating-cart-popup">
+  <h2 class="popup-title">Your Cart</h2>
+  <ul class="cart-items">
+    <!-- Cart items will be dynamically added here using JavaScript -->
+    <p>Total Price: <span id="totalPrice">₹0</span></p>
+  </ul>
+  <!-- Remove the "href" attribute from the checkout button -->
+  <a id="checkoutButton" class="cta-button checkout-button">Checkout</a>
+</div>
+
+<div class="floating-cart-button">
+  <button id="cartButton" class="cta-button"><i class="fas fa-shopping-cart"></i></button>
+</div>
+
+
+  <header> 
+   <img src="Logo.jpg" alt="Restaurant Logo" style="max-width: 150px; height: auto; border-radius: 10px;">
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Menu3.html">Menu</a></li>
+        <li><a href="Restaurant.html">Restaurant</a></li>
+        <li><a href="About.html">About </a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html" class="cta-button">Login</a></li> <!-- Add the Sign Up button link -->
+        <li><a href="profile.html" class="user-icon"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+
+
+  
+    <p>"Delight Your Taste Buds, Indulge in Flavorful Bliss!"</p>
+   
+  </div>
+  <section id="menu">          
+    <h2>Menu</h2>
+
+
+  <h2> <b> BREAK FAST </b> </h2>
+ 
+
+    <div class="food-grid">
+  
+      <div class="food-item">
+        <img src="Idli.jpg" alt="Idli">
+        <div class="food-details">
+          <h2>IDLI</h2>
+          <p>
+
+
+Breakfast when talking recipe. This is a quick recipe which can be made in less than 30 mins.</p>
+          <p><span class="price">PRICE: ₹150</span></p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <a href="Restaurant.html" class="cta-button">Order Now</a>
+      </div>
+<!--
+      <div class="food-item">
+        <img src="South Indian.jpg" alt="South Indian">
+        <div class="food-details">
+          <h2>SOUTH INDIAN</h2>
+          <p>Motherland when talking recipe. This is a quick recipe which can be made in less than 30 mins.</p>
+          <p><span class="price">PRICE: ₹750</span></p>
+          <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+         <a href="Restaurant.html" class="cta-button">Order Now</a>
+      </div>
+-->
+      <div class="food-item">
+        <img src="Maggi.jpg" alt="Chinese">
+        <div class="food-details">
+          <h2>CHINESE</h2>
+          <p>Chinese food talking recipe. This is a quick recipe which can be made in less than 2 mins.</p>
+          <p><span class="price">PRICE: ₹850</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div></div>
+  <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+<!--
+<div class="food-item">
+<img src="Biryani.jpg" alt="Dum Biryani">
+<div class="food-details">
+<h2>DUM BIRYANI</h2>
+<p>Biryani when talking recipe. This is a quick recipe which can be made in less than 30 mins.</p>
+<p><span class="price">PRICE: ₹150</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+-->
+
+<!--
+<div class="food-item">
+<img src="Pizza.jpg" alt="Pizza">
+<div class="food-details">
+<h2>PIZZA</h2>
+<p>Pizza when talking recipe. This is a quick recipe which can be made in less than 30 mins.</p>
+<p><span class="price">PRICE: ₹359</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+-->
+
+
+<div class="food-item">
+<img src="masaladosa.jpg" alt=" Masala Dosa ">
+<div class="food-details">
+<h2>MASALA DOSA</h2>
+<p>It is again a popular South Indian breakfast snack not only in India but abroad as well. 
+</p>
+<p><span class="price">PRICE: ₹55</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+</div>
+
+
+
+
+
+<div>
+<h2>
+
+   <b> LUNCH </b></h2>
+</div>
+
+
+<div class="food-grid">
+
+<!--
+
+<div class="food-item">
+<img src="Fish.jpg" alt="Madurai Aayrai Meen Kulambu">
+<div class="food-details">
+<h2> AAYARAI MEEN KOZHAMBU</h2>
+<p>Aayrai Meen Kulambu is the specialty of Madurai. fish options only during lunch hours.</p>
+<p><span class="price">PRICE: ₹169</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+ <div class="food-item">
+<img src="Lemon.jpg" alt="Lemon Rice">
+<div class="food-details">
+<h2>LEMON RICE (TANGY)</h2>
+<p>This Tamil Nadu 
+food dish has oodles of flavour that pops in your mouth with its unique tang. </p>
+<p><span class="price">PRICE: ₹49</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+
+ <div class="food-item">
+<img src="Chettinad.jpg" alt="Chicken Chettinad">
+<div class="food-details">
+<h2>CHETTINAD CHICKEN</h2>
+<p>Chicken Chettinad a mouth-watering dish worthy of learning how to make it perfectly. 
+</p>
+<p><span class="price">PRICE: ₹159</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+  <a href="Restaurant.html" class="cta-button">Order Now</a></div>
+
+-->
+
+ <div class="food-item">
+<img src="fishcurry.jpg" alt="Meen Kozhambu">
+<div class="food-details">
+<h2>MEEN KOZHAMBU</h2>
+<p>This one is a fish curry is made with whole of chillies and tamarind that makes it hot and sour in one bite.</p>
+<p><span class="price">PRICE: ₹79</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+
+
+<div class="food-item">
+<img src="prawn.jpg" alt="Kerala Prawn Curry">
+<div class="food-details">
+<h2>KERALA PRAWN CURRY</h2>
+<p>This one's a seafood lover's delight. It is a recipe filled with a melange of spices. Prepared with prawn.</p>
+<p><span class="price">PRICE: ₹255</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+<div class="food-item">
+<img src="Biryani.jpg" alt="Dum Biryani">
+<div class="food-details">
+<h2> DUM BIRYANI</h2>
+<p>Biryani when talking recipe. This is a quick recipe which can be made in less than 30 mins.</p>
+<p><span class="price">PRICE: ₹150</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+  <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+</div>
+
+<div>
+
+
+
+
+<h2>
+
+   <b> DINNER</b></h2>
+</div>
+<div class="food-grid">
+
+<div class="food-item">
+<img src="RAVA DOSA.jpeg" alt=" Instant Rava Dosa">
+<div class="food-details">
+<h2>INSTANT RAVA DOSA</h2>
+<p>It is instant, it is delicious and you can hardly ever go wrong with it.
+This paper crisp dosa takes only 30 minutes to prepare.
+</p>
+<p><span class="price">PRICE: ₹359</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+ <div class="food-item">
+<img src="khichdi.jpeg" alt="Bisi Bele Bhaat">
+<div class="food-details">
+<h2>BISI BELE BHAAT</h2>
+<p>Bisi Bele Bhaat is a traditional dish from Karnataka
+ made with rice, lentils, vegetables and coconut. It is similar to a khichdi.</p>
+<p><span class="price">PRICE: ₹85</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+
+ <div class="food-item">
+<img src="PRAWN CURRY.jpeg" alt="Mangalorean Prawn Curry">
+<div class="food-details">
+<h2>MANGALOREAN PRAWN CURRY</h2>
+<p>This curry recipe boast about the delicate flavors of coconut that are a
+perfect complement to the taste of the prawns.
+ </p>
+<p><span class="price">PRICE: ₹320</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+  <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+<!--
+
+ <div class="food-item">
+<img src="Chicken Curry.jpeg" alt="Korri Gassi">
+<div class="food-details">
+<h2>KORRI GASSI CHICKEN</h2>
+<p>A Mangalorean Chicken Curry. Succulent pieces of 
+chicken cooked in finely ground fresh coconut with spices. 
+Serve with Neer Dosa.</p> <p><span class="price">PRICE: ₹359</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+
+
+<div class="food-item">
+<img src="Brown Lentils Curry.jpeg" alt="Whole Masoor Dal">
+<div class="food-details">
+<h2>WHOLE MASOOR DAL</h2>
+<p>
+Whole Masoor Dal Recipe (Brown Lentils Curry)
+Whole Masoor Dal (Brown Lentils Curry) recipe is  healthy and tasty
+ .</p>
+<p><span class="price">PRICE: ₹59</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+
+
+<div class="food-item">
+<img src="Mushroom Masala.jpeg" alt="MUSHROOM MASALA">
+<div class="food-details">
+<h2>
+MUSHROOM MASALA</h2>
+<p>
+Mushroom Masala is an easy and delicious restaurant style Indian Curry made with onions, tomato,
+mushrooms, peas and spices
+
+ .</p>
+<p><span class="price">PRICE: ₹99</span></p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+ <a href="Restaurant.html" class="cta-button">Order Now</a>
+</div>
+-->
+
+</div>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="Logo.jpg" alt="Restaurant Logo" class="footer-logo">
+        <ul class="footer-nav">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Menu3.html">Menu</a></li>
+          <li><a href="Restaurant.html">Restaurants</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+         <li><a href="profile.php" class="user-icon"><i class="fas fa-user"></i></a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section footer-contact">
+        <p class="footer-title">Contact Information</p>
+        <p class="footer-info">Email: contact@chefclick.com</p>
+        <p class="footer-info">Phone: +1 123-456-7890</p>
+      </div>
+      <div class="footer-section footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-copyright">© 2023 Chefclick. All rights reserved.</p>
+  </footer>
+<!-- ... (your HTML code) ... -->
+<script>
+ const cartButton = document.getElementById('cartButton');
+  const cartPopup = document.getElementById('cartPopup');
+  const blurredBackground = document.getElementById('blurredBackground'); 
+  const cartItemsList = cartPopup.querySelector('.cart-items');
+  const checkoutButton = document.getElementById('checkoutButton');
+  const totalPriceElement = document.getElementById('totalPrice'); // Get total price element
+
+  let totalCartPrice = 0;
+
+  // Function to update the total cart price
+  function updateTotalPrice() {
+    totalPriceElement.textContent = `₹${totalCartPrice.toFixed(2)}`;
+  }
+
+  // Function to add items to the cart
+  function addItemToCart(itemName, price, imageUrl) {
+    const existingCartItem = Array.from(cartItemsList.children).find(item => item.dataset.name === itemName);
+
+    if (existingCartItem) {
+      const quantityElement = existingCartItem.querySelector('.quantity');
+      const currentQuantity = parseInt(quantityElement.textContent);
+      quantityElement.textContent = currentQuantity + 1;
+    } else {
+      const cartItem = document.createElement('li');
+      cartItem.classList.add('cart-item');
+      cartItem.dataset.name = itemName;
+      cartItem.innerHTML = `
+        <span><img src="${imageUrl}" alt="${itemName}" class="cart-item-image"></span>
+        <span>&nbsp;</span>
+        <span>${itemName}</span>
+        <span>&nbsp;</span>
+        <span class="quantity">1</span>
+        <button class="quantity-button" data-action="decrease">-</button>
+<button class="quantity-button" data-action="increase">+</button>
+  <span>&nbsp;</span>
+ 
+ <span>&nbsp;₹${price}</span>
+ <!-- Add a space before the price -->
+
+      `;
+      cartItemsList.appendChild(cartItem);
+    }
+
+    totalCartPrice += parseFloat(price);
+    updateTotalPrice();
+  }
+
+  // Function to remove items from the cart
+  function removeItemFromCart(itemName, price) {
+    const existingCartItem = Array.from(cartItemsList.children).find(item => item.dataset.name === itemName);
+
+    if (existingCartItem) {
+      const quantityElement = existingCartItem.querySelector('.quantity');
+      const currentQuantity = parseInt(quantityElement.textContent);
+      
+      if (currentQuantity === 1) {
+        cartItemsList.removeChild(existingCartItem);
+      } else {
+        quantityElement.textContent = currentQuantity - 1;
+      }
+
+      totalCartPrice -= parseFloat(price);
+      updateTotalPrice();
+    }
+  }
+
+  // Event listener for the "Order Now" buttons
+  const orderNowButtons = document.querySelectorAll('.food-item a.cta-button');
+  orderNowButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      const foodItem = event.target.closest('.food-item');
+      const itemName = foodItem.querySelector('.food-details h2').textContent;
+      const priceText = foodItem.querySelector('.food-details .price').textContent;
+      const price = parseFloat(priceText.match(/₹([\d.]+)/)[1]);
+      const imageUrl = foodItem.querySelector('img').getAttribute('src'); // Get the image URL
+    addItemToCart(itemName, price, imageUrl);
+    });
+  });
+
+  // Event listener for the quantity buttons in the cart
+  cartPopup.addEventListener('click', (event) => {
+    if (event.target.classList.contains('quantity-button')) {
+      const cartItem = event.target.closest('.cart-item');
+      const itemName = cartItem.dataset.name;
+      const priceText = cartItem.querySelector('span:last-child').textContent;
+      const price = parseFloat(priceText.match(/\₹([\d.]+)/)[1]);
+
+      if (event.target.dataset.action === 'increase') {
+        addItemToCart(itemName, price);
+      } else if (event.target.dataset.action === 'decrease') {
+        removeItemFromCart(itemName, price);
+      }
+    }
+  });
+
+  // Show cart popup and blurred background
+cartButton.addEventListener('click', () => {
+  cartPopup.style.display = 'block';
+  blurredBackground.style.display = 'block'; // Show the blurred background
+  updateTotalPrice();
+  
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === cartPopup || event.target === blurredBackground) {
+    cartPopup.style.display = 'none';
+    blurredBackground.style.display = 'none'; // Hide the blurred background
+  }
+});
+
+  
+// Event listener for the "Checkout" button
+checkoutButton.addEventListener('click', () => {
+  // Redirect the user to the "pay.html" page
+  window.location.href = 'pay.html';
+});
+
+  // Function to clear the cart
+  function clearCart() {
+    cartItemsList.innerHTML = '';
+    totalCartPrice = 0; // Reset total cart price
+    totalPriceElement.textContent = '₹0'; // Reset total price display
+  }
+
+  // Show cart popup when clicking the cart button
+  cartButton.addEventListener('click', () => {
+    cartPopup.style.display = 'block';
+  });
+
+  // Close the cart popup when clicking outside of it
+  window.addEventListener('click', (event) => {
+    if (event.target === cartPopup) {
+      cartPopup.style.display = 'none';
+    }
+  });
+</script>
+
+<!-- ... (your HTML code) ... -->
+
+</body>
+</html>

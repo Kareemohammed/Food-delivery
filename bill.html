@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Food Order - Order Summary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+  /* Reset some default styles */
+  body, h1, h2, h3, p, label {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .bill-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .bill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .bill-item p {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e85d17;
+    position: relative;
+  }
+
+  .print-button {
+    position: absolute;
+    top: -240px;
+    right: 0;
+    background-color: #e85d17;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .print-button i {
+    margin-right: 5px;
+  }
+
+  .print-button:hover {
+    background-color: #c24700;
+  }
+
+  .back-button {
+    display: inline-block;
+    background-color: #e85d17;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-button:hover {
+    background-color: #c24700;
+  }
+
+  .order-summary {
+    background-color: #e85d17;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .summary-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .summary-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo">
+    </div>
+    <section class="bill-section">
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">Order Summary</h2>
+      <div class="bill-item">
+        <p>Item 1</p>
+        <p>$10.00</p>
+      </div>
+      <div class="bill-item">
+        <p>Item 2</p>
+        <p>$15.00</p>
+      </div>
+      <div class="bill-item">
+        <p>Item 3</p>
+        <p>$8.50</p>
+      </div>
+      <div class="total">
+        Total: $33.50
+        <button class="print-button" onclick="printBill()"><i class="fas fa-print"></i></button>
+      </div>
+    </section>
+
+    <section class="order-summary">
+      <h3 class="summary-title">Order Details</h3>
+      <div class="summary-details">
+        <span>Date:</span>
+        <span>August 15, 2023</span>
+      </div>
+      <div class="summary-details">
+        <span>Order Number:</span>
+        <span>#12345</span>
+      </div>
+      <div class="summary-details">
+        <span>Payment Method:</span>
+        <span>Credit Card</span>
+      </div>
+    </section>
+
+    <a href="home.html" class="back-button">Back to Homepage</a>
+  </div>
+  <script>
+    function printBill() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
+``

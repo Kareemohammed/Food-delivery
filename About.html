@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+  <style>
+    /* General styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* General styles */
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #ff4500; /* Vibrant and bold header background color */
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6100; /* Change background color on hover */
+      color: #fff;
+    }
+
+    /* Main section styles */
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #ff4500; /* Eye-catching color for section headings */
+      font-size: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section p {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      border-radius: 50px;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      background-color: #ff6100;
+      transform: scale(1.05);
+    }
+    
+     .cta-button 1{
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      border-radius: 50px;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button 1:hover {
+      background-color: #ff6100;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #ff4500;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact p {
+      margin-bottom: 5px;
+    }
+
+    .footer-social {
+      text-align: right;
+    }
+
+    .footer-social a {
+      display: inline-block;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #ff4500;
+    }
+
+    /* Additional Footer Styles */
+    .footer-divider {
+      width: 100%;
+      height: 2px;
+      background-color: #ff4500;
+      margin: 20px 0;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff4500;
+    }
+
+    .footer-info {
+      color: #ddd;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    /* Additional styling for specific elements */
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Update the logo size and alignment -->
+    <img src="Logo.jpg" alt="Restaurant Logo" style="max-width: 150px; height: auto; border-radius: 10px;">
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Menu3.html">Menu</a></li>
+        <li><a href="Restaurant.html">Restaurant</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html" class="cta-button 1">Login</a></li>
+        <li><a href="profile.php" class="user-icon"><i class="fas fa-user"></i></a></li>
+       
+      </ul>
+    </nav>
+  
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p>Welcome to Chefclick - the best place to order your favorite food online! At chefclick, we believe that good food brings people together, and we are dedicated to delivering delicious meals right to your doorstep.</p>
+    <p>Our story began with a passion for culinary excellence and a vision to revolutionize the way people experience food. We take pride in offering a diverse menu that caters to all tastes, from traditional classics to modern fusion dishes crafted by our talented chefs.</p>
+    <p>What sets us apart is our commitment to using only the freshest and highest-quality ingredients. We source our produce locally to support local farmers and ensure that every dish we serve is prepared with love and care.</p>
+    <p>With our user-friendly online platform, ordering your favorite food has never been easier. Simply browse our menu, select your desired dishes, and enjoy the convenience of doorstep delivery. We also offer a seamless payment process and provide timely updates on your order status.</p>
+    <p>We are more than just a food delivery service; we are a community that values our customers. Your satisfaction is our top priority, and we are always eager to hear your feedback and suggestions. Chefclick is built on trust, transparency, and the joy of good food.</p>
+    <p>Thank you for choosing Chefclick. We look forward to serving you and becoming a part of your delightful culinary experiences!</p>
+    <p>Stay connected with us on social media to stay updated on our latest offers, promotions, and exciting culinary events!</p>
+    <a href="Login.html" class="cta-button">Sign Up and Start Ordering</a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="Logo.jpg" alt="Restaurant Logo" class="footer-logo">
+        <ul class="footer-nav">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Menu3.html">Menu</a></li>
+          <li><a href="Restaurant.html">Restaurants</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <li><a href="profile.php" class="user-icon"><i class="fas fa-user"></i></a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section footer-contact">
+        <p class="footer-title">Contact Information</p>
+        <p class="footer-info">Email: contact@chefclick.com</p>
+        <p class="footer-info">Phone: +1 123-456-7890</p>
+      </div>
+      <div class="footer-section footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-copyright">© 2023 Chefclick. All rights reserved.</p>
+  </footer>
+  
+</body>
+  
+
+
+</html>

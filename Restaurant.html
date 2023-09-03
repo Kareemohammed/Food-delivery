@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* General styles */
+    body {
+      font-family: 'Helvetica', Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #ff4500; /* Vibrant and bold header background color */
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff6100; /* Change background color on hover */
+      color: #fff;
+    }
+
+    /* Main section styles */
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #ff4500; /* Eye-catching color for section headings */
+      font-size: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section p {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Additional styles for restaurant sections */
+    .restaurant-section {
+      margin: 1rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .restaurant-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .restaurants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+   
+     .cta-button {
+      background-color: #ff4500;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 24px;
+      border-radius: 50px;
+      display: inline-block;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:hover {
+      background-color: #ff6100;
+      transform: scale(1.05);
+    }
+
+ footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1;
+    }
+
+    .footer-logo {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-nav li {
+      margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #ff4500;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact p {
+      margin-bottom: 5px;
+    }
+
+    .footer-social {
+      text-align: right;
+    }
+
+    .footer-social a {
+      display: inline-block;
+      margin-left: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #ff4500;
+    }
+
+    /* Additional Footer Styles */
+    .footer-divider {
+      width: 100%;
+      height: 2px;
+      background-color: #ff4500;
+      margin: 20px 0;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff4500;
+    }
+
+    .footer-info {
+      color: #ddd;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .footer-copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Additional styling for specific elements */
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header> 
+    <!-- Update the logo size and alignment -->
+    <img src="Logo.jpg" alt="Restaurant Logo" style="max-width: 150px; height: auto; border-radius: 10px;">
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Menu3.html">Menu</a></li>
+        <li><a href="Restaurant.html">Restaurant</a></li>
+        <li><a href="About.html">About </a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Login.html" class="cta-button">Login</a></li>
+        <li><a href="profile.html" class="user-icon"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h1>Welcome to Chefclick</h1>
+    <h3>Restaurants</h3>
+    
+    <div class="restaurants-grid">
+      <!-- Restaurant 1 -->
+      <div class="restaurant-section">
+        <h2>Foodie</h2>
+        <img class="restaurant-image" src="img.jpg" alt="Foodie">
+        <p>When the online review system was introduced, restaurants and other businesses improved their quality and service to gain.</p>
+        <div class="rating">★★★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+      <!-- Restaurant 2 -->
+      <div class="restaurant-section">
+        <h2>Seafood</h2>
+        <img class="restaurant-image" src="img2.jpeg" alt="Seafood Restaurant">
+        <p>A good restaurant sets a high standard for its food quality and ensures that guests receive the same quality with every meal.</p>
+        <div class="rating">★★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+        </div>
+
+      <!-- Restaurant 3 -->
+      <div class="restaurant-section">
+        <h2>Miami</h2>
+        <img class="restaurant-image" src="img3.jpeg" alt="Miami">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.In this concept we make kitchen. </p>
+        <div class="rating">★★★</div>
+      <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+
+
+      <!-- Restaurant 4-->
+      <div class="restaurant-section">
+        <h2>Dubai cube</h2>
+        <img class="restaurant-image" src="img4.jpeg" alt="Dubai cube">
+        <p>Great serve and healthy food in our cube .we make 20 year of running of restaurant. we have an experience chef and staff. </p>
+        <div class="rating">★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+      <!-- Restaurant 5-->
+      <div class="restaurant-section">
+        <h2>Peace cafe</h2>
+        <img class="restaurant-image" src="cafe.jpeg" alt="Peace cafe">
+        <p>welcome to our cafe full of jolly and we have good chef. various food and sweets are served to you .present of respect and love</p>
+        <div class="rating">★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+      <!-- Restaurant 6 -->
+      <div class="restaurant-section">
+        <h2>High way</h2>
+        <img class="restaurant-image" src="highway.jpeg" alt="High way">
+        <p>we have thousand of recipes and staff to control the stuff . to follow the role of chef simple and lite. drink and moctail ,coctails </p>
+        <div class="rating">★★★</div>
+       <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+   
+      <!-- Restaurant 7-->
+<!--
+      <div class="restaurant-section">
+        <h2>Indian cafe</h2>
+        <img class="restaurant-image" src="img3.jpeg" alt="Indian cafe">
+        <p>in</p>
+        <div class="rating">★★★</div>
+        <a href="order.html" class="cta-button">Order Now</a>
+      </div>
+
+
+
+      <!-- Restaurant 8-->
+      <div class="restaurant-section">
+        <h2>Hot chille</h2>
+        <img class="restaurant-image" src="hot.jpeg" alt="Hot chille">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.</p>
+        <div class="rating">★★★</div>
+       <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+
+      <!-- Restaurant 9-->
+      <div class="restaurant-section">
+        <h2>Ring Shell</h2>
+        <img class="restaurant-image" src="ring.jpeg" alt="Ring Shell">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.</p>
+        <div class="rating">★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+
+      <!-- Restaurant 10 -->
+      <div class="restaurant-section">
+        <h2>Beach point</h2>
+        <img class="restaurant-image" src="beach.jpeg" alt="Beach point">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.</p>
+        <div class="rating">★★★</div>
+        <a href="menu3.html" class="cta-button">Order Now</a>
+      </div>
+
+
+      <!-- Restaurant 11-->
+<!--
+      <div class="restaurant-section">
+        <h2>Hell Ground</h2>
+        <img class="restaurant-image" src="img3.jpeg" alt="Hell Ground">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.</p>
+        <div class="rating">★★★</div>
+        <a href="order.html" class="cta-button">Order Now</a>
+      </div>
+-->
+
+      <!-- Restaurant 12 -->
+<!--
+      <div class="restaurant-section">
+        <h2>Habibi</h2>
+        <img class="restaurant-image" src="img3.jpeg" alt="Habibi">
+        <p>It's obvious that serving delicious food is one of the key elements of a successful restaurant.</p>
+        <div class="rating">★★★</div>
+        <a href="order.html" class="cta-button">Order Now</a>
+      </div>
+
+     -->
+
+  </section>
+
+
+   <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="Logo.jpg" alt="Restaurant Logo" class="footer-logo">
+        <ul class="footer-nav">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="Menu3.html">Menu</a></li>
+          <li><a href="Restaurant.html">Restaurants</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <li><a href="profile.php" class="user-icon"><i class="fas fa-user"></i></a></li>
+
+        </ul>
+      </div>
+      <div class="footer-section footer-contact">
+        <p class="footer-title">Contact Information</p>
+        <p class="footer-info">Email: contact@chefclick.com</p>
+        <p class="footer-info">Phone: +1 123-456-7890</p>
+      </div>
+      <div class="footer-section footer-social">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-copyright">© 2023 Chefclick. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
